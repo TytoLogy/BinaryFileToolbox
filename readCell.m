@@ -25,13 +25,15 @@ function [C, dataType] = readCell(fp)
 
 %--------------------------------------------------------------------------
 % Sharad J. Shanbhag
-% sshanbha@aecom.yu.edu
+% sshanbhag@neomed.edu
 %--------------------------------------------------------------------------
 % Revision History
 %	2 Mar 2009 (SJS): file created
 %	3 Mar 2009 (SJS):
 %		-added dataType return variable
 %		-modified help info to conform to BinaryFileToolbox format
+%	11 Jul 016 (SJS):
+%		- updated email address
 %--------------------------------------------------------------------------
 % TO DO:
 %--------------------------------------------------------------------------
