@@ -30,7 +30,7 @@ function [V, dataFmt] = readVector(fp, fmt)
 
 %--------------------------------------------------------------------------
 % Sharad J. Shanbhag
-% sshanbha@aecom.yu.edu
+% sshanbhag@neomed.edu
 %--------------------------------------------------------------------------
 % Revision History
 %	5 Feb 2009 (SJS): file created
@@ -42,6 +42,8 @@ function [V, dataFmt] = readVector(fp, fmt)
 %	3 Mar 2009 (SJS):
 %		-added dataFmt return parameter
 %		-modified help info to conform to BinaryFileToolbox format
+%	11 Jul 016 (SJS):
+%		- updated email address
 %--------------------------------------------------------------------------
 % TO DO:
 %--------------------------------------------------------------------------
