@@ -32,7 +32,7 @@ function status = writeCell(fp, C)
 
 %--------------------------------------------------------------------------
 % Sharad J. Shanbhag
-% sshanbha@aecom.yu.edu
+% sshanbhag@neomed.edu
 %--------------------------------------------------------------------------
 % Revision History
 %	2 Mar 2009 (SJS): function created
@@ -41,6 +41,9 @@ function status = writeCell(fp, C)
 %		- fixed problem of writing matrix vs. vector. hopefully!
 %		  solution: just write matrices.
 %		-modified help info to conform to BinaryFileToolbox format
+%	11 Jul 016 (SJS):
+%		- updated email address
+%		- added 'uint32' type for 'logical' Matlab arrays
 %--------------------------------------------------------------------------
 % TO DO:
 %--------------------------------------------------------------------------
@@ -107,6 +110,8 @@ for cellIndex = 1:nCells
 			outFmt = 'single';
 		elseif isa(C{cellIndex}, 'double')
 			outFmt = 'double';
+		elseif isa(C{cellIndex}, 'logical')
+			outFmt = 'uint32';
 		else
 			disp([mfilename ': ' sprintf('C{%s}', cellIndex) ' is unknown data format']);
 			disp('Using schar format...');
@@ -117,6 +122,7 @@ for cellIndex = 1:nCells
 		
 	% error, unsupported type
 	else
+		fprintf('message %s\n', s);
 		error([mfilename ': ' sprintf('C{%d}', cellIndex) ' is unknown type!!!']);
 	end
 
