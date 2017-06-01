@@ -42,6 +42,8 @@ function [V, dataFmt] = readVector(fp, fmt)
 %	3 Mar 2009 (SJS):
 %		-added dataFmt return parameter
 %		-modified help info to conform to BinaryFileToolbox format
+%	11 Jul 016 (SJS):
+%		- updated email address
 %	1 Jun 2017 (SJS): added check for eof
 %--------------------------------------------------------------------------
 % TO DO:
