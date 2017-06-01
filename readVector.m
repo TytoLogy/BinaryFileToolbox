@@ -30,7 +30,7 @@ function [V, dataFmt] = readVector(fp, fmt)
 
 %--------------------------------------------------------------------------
 % Sharad J. Shanbhag
-% sshanbha@aecom.yu.edu
+% sshanbhag@neomed.edu
 %--------------------------------------------------------------------------
 % Revision History
 %	5 Feb 2009 (SJS): file created
@@ -42,9 +42,18 @@ function [V, dataFmt] = readVector(fp, fmt)
 %	3 Mar 2009 (SJS):
 %		-added dataFmt return parameter
 %		-modified help info to conform to BinaryFileToolbox format
+%	1 Jun 2017 (SJS): added check for eof
 %--------------------------------------------------------------------------
 % TO DO:
 %--------------------------------------------------------------------------
+
+% check for eof
+if feof(fp)
+	warning([mfilename ': end of file!']);
+	V = [];
+	dataFmt = [];
+	return
+end
 
 % read in the data id
 id = fread(fp, 1, 'uchar=>char');
